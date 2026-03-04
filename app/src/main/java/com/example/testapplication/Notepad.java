@@ -10,11 +10,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import java.util.List;
 
 public class Notepad extends AppCompatActivity {
 
     Button addnote;
 
+    RecyclerView recyclerView;
+
+    DatabaseHelper dbHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,15 +32,21 @@ public class Notepad extends AppCompatActivity {
             return insets;
         });
 
+        recyclerView = findViewById(R.id.recyclerViewTobby);
+        dbHelper = new DatabaseHelper(this);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
         addnote = findViewById(R.id.addNotes);
-        addnote.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent next = new Intent(Notepad.this, Notes1.class);
-                        startActivity(next);
-                    }
-                }
-        );
+        addnote.setOnClickListener(v -> {
+            Intent next = new Intent(Notepad.this, Notes1.class);
+            startActivity(next);
+        });
+    }
+    @Override
+    protected void onResume(){
+        super.onResume();
+        List<String[]> notesList = dbHelper.getAllNotes();
+        NotesAdapter adapter = new NotesAdapter(notesList);
+        recyclerView.setAdapter(adapter);
     }
 }
