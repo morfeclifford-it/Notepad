@@ -12,11 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TestApplication">
         <activity
+            android:name=".NotesView"
+            android:exported="false" />
+        <activity
             android:name=".Notes1"
             android:exported="false" />
         <activity
             android:name=".Notepad"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

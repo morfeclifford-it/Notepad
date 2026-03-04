@@ -22,5 +22,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "TestApplication"
+rootProject.name = "Notepad"
 include(":app")
