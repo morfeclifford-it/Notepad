@@ -9,14 +9,15 @@
     tools:context=".LoginNotepad">
 
     <LinearLayout
-        android:layout_width="329dp"
-        android:layout_height="628dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.364">
+        app:layout_constraintVertical_bias="0.128">
 
         <ImageView
             android:id="@+id/loginLogo"
@@ -39,8 +40,9 @@
 
         <EditText
             android:id="@+id/LoginEmailAddress"
-            android:layout_width="match_parent"
+            android:layout_width="250sp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_margin="40sp"
             android:ems="10"
             android:hint="Email"
@@ -49,8 +51,9 @@
 
         <EditText
             android:id="@+id/LoginPassword3"
-            android:layout_width="match_parent"
+            android:layout_width="250sp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginLeft="40sp"
             android:layout_marginRight="40sp"
             android:ems="10"
@@ -61,7 +64,7 @@
 
         <Button
             android:id="@+id/Loginbutton"
-            android:layout_width="271dp"
+            android:layout_width="251dp"
             android:layout_height="52dp"
             android:layout_gravity="center"
             android:layout_marginTop="40sp"
@@ -83,8 +86,8 @@
             android:textSize="12sp" />
 
         <Button
-            android:id="@+id/SignUpButton"
-            android:layout_width="271dp"
+            android:id="@+id/SignUpButton1"
+            android:layout_width="251dp"
             android:layout_height="52dp"
             android:layout_gravity="center"
             android:backgroundTint="#2F2F2F"
