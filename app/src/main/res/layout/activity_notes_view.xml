@@ -22,7 +22,7 @@
             android:layout_width="349dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="30sp"
-            android:layout_marginTop="22sp"
+            android:layout_marginTop="15sp"
             android:text="Title"
             android:textFontWeight="350"
             android:textColor="@color/white"
@@ -36,6 +36,15 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30sp"
             android:text="Content"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/white" />
+        <TextView
+            android:id="@+id/DateView"
+            android:layout_width="349dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30sp"
+            android:text="Content"
+            android:textSize="12sp"
             android:fontFamily="sans-serif-light"
             android:textColor="@color/white" />
     </LinearLayout>
