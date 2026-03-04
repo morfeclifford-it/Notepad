@@ -14,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class LoginNotepad extends AppCompatActivity {
 
     Button SignUp;
+    Button Login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +27,22 @@ public class LoginNotepad extends AppCompatActivity {
             return insets;
         });
 
-        SignUp = findViewById(R.id.SignUpButton);
+        SignUp = findViewById(R.id.SignUpButton1);
         SignUp.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent(LoginNotepad.this, SignUpScreen.class );
+                        startActivity(intent);
+                    }
+                }
+        );
+        Login = findViewById(R.id.Loginbutton);
+        Login.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(LoginNotepad.this, Notepad.class );
                         startActivity(intent);
                     }
                 }

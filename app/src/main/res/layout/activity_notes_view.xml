@@ -1,53 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".NotesView">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/noteviewbg"
-        android:orientation="vertical"
-        android:padding="5sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:cardBackgroundColor="#404040"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="4dp">
 
-        <TextView
-            android:id="@+id/viewTitle"
-            android:layout_width="349dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30sp"
-            android:layout_marginTop="3sp"
-            android:text="Title"
-            android:textFontWeight="350"
-            android:textColor="@color/white"
-            android:fontFamily="sans-serif-light"
-            android:textSize="23sp"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <TextView
-            android:id="@+id/viewContent"
-            android:layout_width="349dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30sp"
-            android:text="Content"
-            android:fontFamily="sans-serif-light"
-            android:textColor="@color/white" />
-        <TextView
-            android:id="@+id/DateView"
-            android:layout_width="349dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30sp"
-            android:layout_marginBottom="3sp"
-            android:text="Content"
-            android:textSize="12sp"
-            android:fontFamily="sans-serif-light"
-            android:textColor="@color/white" />
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/viewTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:id="@+id/viewContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#7E7C7C"
+                android:textSize="14sp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/DateView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#555555"
+                android:textSize="12sp"
+                android:layout_marginTop="6dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

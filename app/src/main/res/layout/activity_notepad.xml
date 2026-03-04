@@ -11,16 +11,16 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="358dp"
-        android:layout_height="129dp"
+        android:layout_height="105dp"
         android:orientation="vertical"
         android:paddingStart="15sp"
         android:paddingEnd="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.098">
+        app:layout_constraintVertical_bias="0.071">
 
         <TextView
             android:id="@+id/notesHeader"
@@ -30,12 +30,12 @@
             android:fontFamily="sans-serif-light"
             android:text="Notes"
             android:textColor="@color/white"
-            android:textSize="50sp" />
+            android:textSize="40sp" />
 
         <SearchView
             android:id="@+id/search"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="33sp"
             android:background="@drawable/searchbar"
             android:inputType="text" />
 
@@ -44,7 +44,7 @@
     <ImageButton
         android:id="@+id/settings"
         android:layout_width="47dp"
-        android:layout_height="54dp"
+        android:layout_height="48dp"
         android:backgroundTint="#1D1D1D"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
@@ -57,7 +57,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="410dp"
+        android:layout_width="match_parent"
         android:layout_height="65dp"
         android:background="#2F2F2F"
         android:orientation="horizontal"
@@ -66,14 +66,15 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
-            android:layout_width="205dp"
-            android:layout_height="match_parent"
+            android:layout_width="192dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="9sp"
             android:orientation="vertical">
 
             <ImageButton
                 android:id="@+id/notesButton"
-                android:layout_width="45dp"
-                android:layout_height="47dp"
+                android:layout_width="40dp"
+                android:layout_height="37dp"
                 android:layout_gravity="center"
                 android:backgroundTint="#2F2F2F"
                 android:scaleType="fitCenter"
@@ -91,15 +92,16 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="205dp"
+            android:layout_width="175dp"
             android:layout_height="match_parent"
+            android:layout_marginBottom="9sp"
             android:orientation="vertical"
            >
 
             <ImageView
                 android:id="@+id/todoButton"
-                android:layout_width="45dp"
-                android:layout_height="47dp"
+                android:layout_width="30dp"
+                android:layout_height="37dp"
                 android:layout_gravity="center"
                 android:backgroundTint="#2F2F2F"
                 android:scaleType="fitCenter"
@@ -119,14 +121,15 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewTobby"
-        android:layout_width="409dp"
-        android:layout_height="473dp"
-        android:layout_marginTop="5dp"
-        android:padding="35dp"
+        android:layout_width="345dp"
+        android:layout_height="444dp"
+        android:layout_marginEnd="18sp"
+        android:layout_marginBottom="44dp"
+        android:paddingStart="20sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.744" />
 
     <Button
         android:id="@+id/addNotes"
@@ -136,7 +139,7 @@
         android:backgroundTint="#383838"
         android:text="+"
         android:fontFamily="serif-monospace"
-        android:textSize="36sp"
+        android:textSize="30sp"
         android:textColor="#D0BA0E"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
