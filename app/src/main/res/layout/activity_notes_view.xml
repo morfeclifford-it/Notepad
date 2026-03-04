@@ -8,10 +8,11 @@
     tools:context=".NotesView">
 
     <LinearLayout
-        android:layout_width="410dp"
-        android:layout_height="96dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/noteviewbg"
         android:orientation="vertical"
+        android:padding="5sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +23,7 @@
             android:layout_width="349dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="30sp"
-            android:layout_marginTop="15sp"
+            android:layout_marginTop="3sp"
             android:text="Title"
             android:textFontWeight="350"
             android:textColor="@color/white"
@@ -43,6 +44,7 @@
             android:layout_width="349dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="30sp"
+            android:layout_marginBottom="3sp"
             android:text="Content"
             android:textSize="12sp"
             android:fontFamily="sans-serif-light"
